@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800" Background="#FF6818BB" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130" />
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="ToWindow1Btn" Click="ToWindow1Btn_Click" Height="50" Width="150" VerticalAlignment="Top" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" Content="Назад" Margin="7" Background="#FF80BB8F" FontSize="23" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Button x:Name="REgBtn" Click="RegBtn_Click" Height="50" Width="220" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" Content="Зарегистрироваться" Margin="10" Background="#FF80BB8F" FontSize="23" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox  x:Name="LoginBox" Height="40" Width="250" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontSize="24" LostFocus="AddText" GotFocus="RemoveText"/>
+        <Label x:Name="LoginBoxPH"  Content="Введите логин" Grid.Row="0" Grid.Column="1" Width="250" Height="40" Opacity="0.25" IsHitTestVisible="False" Background="Transparent" VerticalAlignment="Bottom" FontSize="24" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox LostFocus="AddText1" GotFocus="RemoveText1" x:Name="emailBox" Height="40" Width="250" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontSize="24"/>
+        <TextBox x:Name="passBox" Height="40" Width="250" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" FontSize="24" LostFocus="AddText2" GotFocus="RemoveText2"/>
+        <TextBox x:Name="passbox2"  Height="40" Width="250" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" FontSize="24" LostFocus="AddText3" GotFocus="RemoveText3"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Width="250" Height="40" x:Name="redline1" BorderThickness="3" BorderBrush="Red" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="24"/>
+        <TextBox Grid.Row="1" Grid.Column="2" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Right"  Background="#FF6818BB" x:Name="tb1" BorderThickness="0" FontSize="18" TextWrapping="Wrap"/>
+        <TextBox Grid.Row="2" Grid.Column="2" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF6818BB" x:Name="tb2" BorderThickness="0" FontSize="18" TextWrapping="Wrap"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Width="250" Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom"  x:Name="redline2" BorderThickness="3" BorderBrush="Red" FontSize="24"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Width="250" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Center" x:Name="redline3" BorderThickness="3" BorderBrush="Red" FontSize="24"/>
+        <Image Source="а/o.png" Grid.Column="0" Grid.Row="0" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Image Source="а/p.png" Grid.Column="0" Grid.Row="1" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Image Source="а/l.png" Grid.Column="0" Grid.Row="2" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Image Source="а/l.png" Grid.Column="0" Grid.Row="3" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Label x:Name="emailBoxPH"  Content="Введите почту" Grid.Row="1" Grid.Column="1" Width="250" Height="40" Opacity="0.25" IsHitTestVisible="False" Background="Transparent" VerticalAlignment="Bottom" FontSize="24" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label x:Name="passBoxPH"  Content="Введите пароль" Grid.Row="2" Grid.Column="1" Width="250" Height="40" Opacity="0.25" IsHitTestVisible="False" Background="Transparent" VerticalAlignment="Bottom" FontSize="24" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label x:Name="passpBoxPH"  Content="Повторите пароль" Grid.Row="3" Grid.Column="1" Width="250" Height="40" Opacity="0.25" IsHitTestVisible="False" Background="Transparent" VerticalAlignment="Bottom" FontSize="24" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+    </Grid>
+</Window>
